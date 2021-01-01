@@ -29,6 +29,7 @@ def getFile():
 		os.system("mkdir input")
 
 	file.save('./input/'+filename)
+	print(cv2.imread(file).shape)
 	return jsonify({"status":1,"message":"Success","fileName":filename})
 
 @app.route('/')
