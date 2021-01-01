@@ -84,8 +84,10 @@ def demo():
 		os.system("mkdir preds")
 	img = cv2.imread("input/"+img_file_name)
 	img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+	print(img.shape)
 	if img.shape[0]!=4000 and img.shape[1]!=3000:
 		img = cv2.resize(img, (4000,3000), interpolation = cv2.INTER_AREA)
+		print(img.shape)
 
 	
 	out = predict(img)
