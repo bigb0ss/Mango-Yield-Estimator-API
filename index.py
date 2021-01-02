@@ -120,5 +120,9 @@ def getOutputFile(path):
 def getPredsFile(path):
 	return send_from_directory('preds',path)
 
+@app.route('/health')
+def health():
+	return jsonify({'status':1})
+
 if __name__ =='__main__':
 	app.run(debug=True,host='0.0.0.0')
