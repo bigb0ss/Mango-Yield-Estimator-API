@@ -115,9 +115,6 @@ def demo():
 def getOutputFile(path):
 	return send_from_directory('output',path)
 
-@app.route('/health')
-def health():
-	return jsonify({'status':1})
 
 @app.route('/api/preds/<path:path>',methods=['GET'])
 def getPredsFile(path):
